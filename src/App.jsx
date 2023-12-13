@@ -56,6 +56,13 @@ function App() {
 		})
 	}
 
+	function increaseTheScoreByOne() {
+		setCurrentScore(currentScore + 1)
+	}
+	function resetTheScoreToZero() {
+		setCurrentScore(0)
+	}
+
 	return (
 		<>
 			<Header currentScore={currentScore} highScore={highScore} />
@@ -64,6 +71,8 @@ function App() {
 				<GameBoard
 					cardsArray={cardsArray}
 					shuffleCardsArray={shuffleCardsArray}
+					increaseTheScoreByOne={increaseTheScoreByOne}
+					resetTheScoreToZero={resetTheScoreToZero}
 				/>
 			)}
 		</>
