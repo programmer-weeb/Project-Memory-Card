@@ -58,6 +58,9 @@ function App() {
 
 	function increaseTheScoreByOne() {
 		setCurrentScore(currentScore + 1)
+		if (currentScore >= highScore) {
+			setHighScore(currentScore + 1)
+		}
 	}
 	function resetTheScoreToZero() {
 		setCurrentScore(0)
