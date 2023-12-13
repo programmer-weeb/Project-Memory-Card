@@ -18,6 +18,7 @@ export default function Header({ currentScore, highScore }) {
 				Current Score: {currentScore}
 			</h2>
 			<h2>High Score: {highScore}</h2>
+			<h5><a href="https://github.com/programmer-weeb/Project-Memory-Card">The Repo</a></h5>
 		</div>
 	)
 }
