@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable linebreak-style */
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 
 export default function GameBoard({
