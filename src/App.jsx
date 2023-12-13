@@ -11,6 +11,7 @@ function App() {
 	const [cardsArray, setCardsArray] = useState([])
 
 	useEffect(() => {
+		document.title = 'Memory game'
 		getDataFromGifyAPI().then((apiData) => {
 			console.log('useEffect then')
 			setApiData(apiData)
