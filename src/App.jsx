@@ -1,5 +1,5 @@
-/* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable linebreak-style */
+/* eslint-disable react/react-in-jsx-scope */
 import { useEffect, useState } from 'react'
 import Header from './Header'
 import GameBoard from './GameBoard'
