@@ -2,13 +2,11 @@
 /* eslint-disable linebreak-style */
 import { useEffect, useState } from 'react'
 import Header from './Header'
-// import './App.css'
 import GameBoard from './GameBoard'
 
 function App() {
 	const [currentScore, setCurrentScore] = useState(0)
 	const [highScore, setHighScore] = useState(0)
-	// const [cardsData, setCardsData] = useState('no cards data yet')
 	const [apiData, setApiData] = useState()
 	const [cardsArray, setCardsArray] = useState([])
 
@@ -19,13 +17,12 @@ function App() {
 			setCardsArray(apiData.data)
 			console.log('cards array')
 			console.log(cardsArray)
-			// console.log(apiData.data)
 		})
 	}, [])
 
 	async function getDataFromGifyAPI() {
 		const apiData = await fetch(
-			'https://api.giphy.com/v1/gifs/search?api_key=84pyz1yqbOJGT2bT9eI2OPzrbAPF6F5s&q=cat&limit=5&offset=0&rating=g&lang=en&bundle=messaging_non_clips'
+			'https://api.giphy.com/v1/gifs/search?api_key=84pyz1yqbOJGT2bT9eI2OPzrbAPF6F5s&q=cat&limit=15&offset=0&rating=g&lang=en&bundle=messaging_non_clips'
 		).then((response) => response.json())
 		console.log('from getDataFromGifyAPI function')
 		console.log(apiData)
@@ -34,7 +31,7 @@ function App() {
 
 	function shuffleCardsArray() {
 		setCardsArray((prevArr) => {
-			const newArr = [...prevArr] // Create a new array to avoid modifying the existing one in place
+			const newArr = [...prevArr]
 
 			let currentIndex = newArr.length,
 				randomIndex
@@ -69,7 +66,6 @@ function App() {
 	return (
 		<>
 			<Header currentScore={currentScore} highScore={highScore} />
-			{/* <GameBoard cardsData={cardsData} /> */}
 			{cardsArray && (
 				<GameBoard
 					cardsArray={cardsArray}
